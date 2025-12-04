@@ -1,0 +1,37 @@
+graph TD
+    %% نقش‌ها
+    Student("دانشجو")
+    Manager("مدیر سلف")
+    Admin("ادمین سیستم")
+
+    %% Use Caseهای دانشجو
+    UC_Login("ثبت‌نام و ورود")
+    UC_ViewMenu("مشاهده منوی غذایی")
+    UC_Reserve("رزرو غذا")
+    UC_Cancel("لغو رزرو")
+    UC_Pay("پرداخت آنلاین")
+
+    %% Use Caseهای مدیر
+    UC_ManageMenu("مدیریت منوی غذایی")
+
+    %% Use Caseهای ادمین
+    UC_ManageUsers("مدیریت کاربران")
+    UC_ManageTransactions("مدیریت تراکنش‌ها")
+    UC_ViewReports("مشاهده گزارش‌ها")
+
+    %% ارتباط نقش‌ها
+    Student --> UC_Login
+    Student --> UC_ViewMenu
+    Student --> UC_Reserve
+    Student --> UC_Cancel
+    Student --> UC_Pay
+
+    Manager --> UC_ManageMenu
+    Admin --> UC_ManageUsers
+    Admin --> UC_ManageTransactions
+    Admin --> UC_ViewReports
+
+    %% روابط include/extend
+    UC_Reserve --> UC_ViewMenu
+    UC_Reserve --> UC_Pay
+    UC_Cancel --> UC_Reserve
