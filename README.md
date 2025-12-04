@@ -59,8 +59,8 @@
 | بخش                     | لینک‌ها                                           |
 |-------------------------|---------------------------------------------------|
 | تحلیل نیازمندی‌ها      | [requirments.md](docs/requirments.md)             |
-| موارد کاربرد و سناریوها | [usecase_diagram.md](docs/usecase_diagram.md)     |
-| طراحی سیستم            | [architcture.md](docs/architcture.md)             |
+| موارد کاربرد و سناریوها | [usecase_diagram.mmd](docs/usecase_diagram.mmd)     |
+| طراحی سیستم            | [architcture.md](docs/architecture.md)             |
 
   ## برنامه زمان بندی اولیه 
 | فاز | عنوان فاز                         | بازه زمانی            |
