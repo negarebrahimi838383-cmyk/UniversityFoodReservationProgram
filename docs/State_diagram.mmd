@@ -1,0 +1,11 @@
+stateDiagram-v2
+    [*] --> New_Order : ثبت توسط کاربر
+    New_Order --> Awaiting_Admin_Approval : ارسال برای مدیر
+    Awaiting_Admin_Approval --> Admin_Approved : مدیر تأیید کرد
+    Awaiting_Admin_Approval --> Admin_Rejected : مدیر رد کرد
+    Admin_Approved --> Preparing : شروع آماده‌سازی غذا
+    Preparing --> Ready_for_Delivery : غذا آماده شد
+    Ready_for_Delivery --> Delivered : تحویل به کاربر
+    Delivered --> [*]
+
+    Admin_Rejected --> [*] : لغو و پایان
