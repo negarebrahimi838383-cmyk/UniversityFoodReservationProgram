@@ -1,0 +1,35 @@
+classDiagram
+    class User {
+        -int userID
+        -string username
+        -string userType
+    }
+
+    class FoodItem {
+        -int itemID
+        -string name
+        -float price
+        -int stock
+    }
+
+    class Menu {
+        -int menuID
+        -Date activeDate
+    }
+
+    class Order {
+        -int orderID
+        -Date orderDate
+        -string status
+        +float calculateTotal()
+    }
+
+    class OrderItem {
+        -int orderItemID
+        -int quantity
+    }
+
+    User "1" -- "*" Order : ثبت می‌کند
+    Order "1" -- "*" OrderItem : شامل
+    FoodItem "1" -- "*" OrderItem : مرجع
+    Menu "1" -- "*" FoodItem : ارائه می‌دهد
